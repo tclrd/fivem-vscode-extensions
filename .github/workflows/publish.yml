@@ -1,0 +1,31 @@
+name: Publish Extension
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1
+
+      - name: Build
+        run: dotnet build
+
+      - name: Package Extension
+        run: |
+          nuget install -OutputDirectory .\packages VisualStudio.Marketplace.Publish
+          .\packages\VisualStudio.Marketplace.Publish.\tools\vsixpublisher.exe publish -path YourExtension.vsix -personalAccessToken ${{ secrets.VS_MARKETPLACE_PAT }}
+        env:
+          VSIX_PUBLISHER_ROOT: .\packages\VisualStudio.Marketplace.Publish
+        shell: powershell
+
