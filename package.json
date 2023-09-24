@@ -2,7 +2,6 @@
   "name": "fivem-ox-essentials",
   "displayName": "fivem-ox-essentials",
   "publisher": "tclrd",
-  "repository": "",
   "description": "Essential package of FiveM extensions for use with the overextended ecosystem",
   "version": "0.0.1",
   "engines": {
@@ -11,8 +10,12 @@
   "categories": [
     "Extension Packs"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tclrd/fivem-vscode-extensions"
+  },
   "keywords":[
-    
+
   ],
   "extensionPack": [ 
     "sumneko.lua",
