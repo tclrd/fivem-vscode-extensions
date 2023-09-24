@@ -1,5 +1,9 @@
 # Fivem Ox Essentials
 
+![Visual Studio Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/tclrd.fivem-ox-essentials) ![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/tclrd.fivem-ox-essentials)
+
+_This extension package is not authored, published, sponsored, nor endorsed by Cfx.re._
+
 This package is inspired by the [FiveM Development](https://marketplace.visualstudio.com/items?itemName=ViorityGroup.fivem-development) extension package by [Tuncion](https://github.com/Tuncion/). Loved the concept, however, my team and I do not use jquery, qb-core or esx.
 
 I rebuilt it to be used with the [overextended](https://github.com/overextended) ecosystem and will eventually add some Typescript/React extensions as well.

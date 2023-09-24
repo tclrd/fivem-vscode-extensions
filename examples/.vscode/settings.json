@@ -1,0 +1,36 @@
+// Example VSCode Workspace Settings File
+// https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations
+{
+    // Lua Language Server
+    "Lua.runtime.version": "Lua 5.4", // Use Lua 5.4 when enabled in fxmanifest.lua
+    "Lua.runtime.fileEncoding": "utf8",
+    "Lua.diagnostics.globals": [
+        "MySQL" // Enable MySQL global variable
+    ],
+    // Disable diagnostics parts, use it on your own risk!
+    // "Lua.diagnostics.disable": [
+    //     "cast-local-type",
+    //     "need-check-nil",
+    //     "missing-parameter",
+    //     "param-type-mismatch"
+    // ],
+    // Todo Tree
+    "todo-tree.regex.regex": "(//|--|<!--|/*)\\s*($TAGS).*(\\n\\s*//\\s{2,}.*)*", // Add Compatibility for Lua, HTML and CSS
+    // Auto Formating
+    "[html]": { // Overwrite Settings for Language HTML
+        "editor.defaultFormatter": "vscode.html-language-features", // Set default Formatter
+        "editor.formatOnSave": true // Enable Auto Formating on Save
+    },
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features",
+        "editor.formatOnSave": true
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.formatOnSave": true
+    },
+    "[lua]": {
+        "editor.defaultFormatter": "JohnnyMorganz.stylua",
+        "editor.formatOnSave": true
+    }
+}
